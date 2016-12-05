@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problem 9</title>
+</head>
+<body>
+<script type="text/javascript">
+	let result = false;
+
+	while(!result) {
+		let firstNum = Math.ceil(Math.random() * 998);
+		let secondNum = Math.ceil(Math.random() * (999 - firstNum));
+		let thirdNum = 1000 - firstNum - secondNum;
+		let numArr = [firstNum, secondNum, thirdNum];
+
+		numArr.sort(function(a, b){return a-b});
+		
+		let a = numArr[0];
+		let b = numArr[1];
+		let c = numArr[2];
+
+		if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2)) {
+			result = numArr;
+		}
+	}
+
+	console.log(result);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fib</title>
+</head>
+<body>
+<script type="text/javascript">
+	let fibArr = [0,1];
+	let result = 0;
+	while ((fibArr[fibArr.length - 1] + fibArr[fibArr.length - 2]) < 4000000) {
+		fibArr.push(fibArr[fibArr.length - 1] + fibArr[fibArr.length - 2]);
+	}
+	for (let i = 0; i < fibArr.length; i++) {
+		if (fibArr[i] % 2 == 0) {
+			result += fibArr[i];
+		}
+	}
+	console.log(result);
+</script>
+</body>
+</html>

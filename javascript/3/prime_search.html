@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problem 3</title>
+</head>
+<body>
+<script type="text/javascript">
+	result = findFactor();
+	console.log(result);
+
+	function findFactor() {
+		for (let i = 8462696833; i > 2; i -= 2) {
+			if (600851475143 % i == 0) {
+				if ((i % 2 != 0) && (i % 3 != 0) && (i % 5 != 0) && (i % 7 != 0) && (i % 11 != 0)) {
+					if (isPrime(i)) {
+						return i;
+					}
+				}
+			}
+		}
+	}
+
+	function isPrime(number) {
+		console.log(number);
+		for (let j = 13; j < number / 11; j += 2) {
+			if (number % j == 0) { return false; }
+		}
+		return true;
+	}
+</script>
+</body>
+</html>
